@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background-color: rgb(41, 40, 40);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+span:nth-child(1) {
+  background: linear-gradient(to right, #ff69b4, #7a288a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+span:nth-child(2) {
+  background: linear-gradient(to right, #45a0e6, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+span {
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+.task-adder {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 10px 30px 10px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+#add-task {
+  padding: 7px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.task{
+  position: relative;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.checkbox , .task-name{
+  display: inline-block;
+}
+.checkbox {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #ccc;
+  border-radius: 50%; /* This makes the checkbox rounded */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.checkbox:checked {
+  background-color: #429a45;
+  border-color: #429a45;
+}
+
+.checkbox:checked::after {
+  content: '✓'; /* Unicode character for check mark */
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.task-name{
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+}
+.trash{
+  position: absolute;
+  right: 0;
+}
